@@ -1,9 +1,12 @@
 import pygame
 
 
+import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
     def __init__(self,ai_settings,screen):
+        super(Ship, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
         self.image = pygame.image.load('/Users/ahmad/Desktop/Alien_invasion/images/ship.bmp')
@@ -29,4 +32,3 @@ class Ship():
 
     def center_ship(self):
         self.center = self.screen_rect.centerx
-        
